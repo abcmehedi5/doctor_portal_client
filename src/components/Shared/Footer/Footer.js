@@ -3,7 +3,13 @@ import { Link } from 'react-router-dom';
 import './Footer.css'
 const Footer = () => {
     return (
-        <section className='footer-container p-5 bd-highlight'>
+        <section className='footer-container p-5 bd-highlight'
+
+            data-aos="flip-left"
+            data-aos-easing="ease-in-out"
+            data-aos-mirror="true"
+            data-aos-duration="1000"
+        >
             <div className="row d-flex align-items-center ">
                 <div className="col-md-3">
                     <ul className='footerList' >

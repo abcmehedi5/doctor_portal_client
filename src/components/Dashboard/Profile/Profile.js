@@ -5,7 +5,12 @@ import UserAppointments from './UserAppointments/UserAppointments';
 
 const Profile = () => {
     return (
-        <div className='row'>
+        <div className='row'
+            data-aos="fade-in"
+            data-aos-easing="ease-in-out"
+            data-aos-mirror="true"
+            data-aos-duration="500"
+        >
             <div className="col-md-3">
                 <ProfileSidebar></ProfileSidebar>
             </div>

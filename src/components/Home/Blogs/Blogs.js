@@ -33,7 +33,12 @@ const Blogs = () => {
     return (
         <section className='blog-container blog'>
             <div className="container">
-                <div className="section-header text-center mb-3">
+                <div className="section-header text-center mb-3"
+                      data-aos="zoom-in"
+                      data-aos-easing="ease-in-out"
+                      data-aos-mirror="true"
+                      data-aos-duration="1000"
+                >
                     <h5 style={{color:'#1cc7c1'}}>OUR BLOG</h5>
                     <h1>From Our Blog News</h1>
                 </div>

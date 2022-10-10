@@ -3,7 +3,12 @@ import Navbar from '../../Shared/Navbar/Navbar';
 import './Contact.css'
 const Contact = () => {
     return (
-        <section className='contact-container contacts'>
+        <section className='contact-container contacts '
+            data-aos="flip-up"
+            data-aos-easing="ease-in-out"
+            data-aos-mirror="true"
+            data-aos-duration="1000"
+        >
             <div className='text-center mt-5 p-5'>
                 <h4 style={{ color: '#1cc7c1' }}>CONTACT US</h4>
                 <h1>Always Connect with us</h1>

@@ -31,7 +31,12 @@ const Testimonials = () => {
     return (
         <section className='mt-5 pt-5 mb-5 testimonials'>
             <div className="container">
-                <div className="section-header">
+                <div className="section-header"
+                      data-aos="zoom-in"
+                      data-aos-easing="ease-in-out"
+                      data-aos-mirror="true"
+                      data-aos-duration="1000"
+                >
                     <h5 style={{color:'#1cc7c1'}}>TESTIMONIALS</h5>
                     <h1>What's Our Patients <br /> Says</h1>
                 </div>

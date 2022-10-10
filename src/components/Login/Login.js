@@ -224,7 +224,12 @@ const Login = () => {
                     <div className="row d-flex align-items-center">
                         <div className="col-md-5 text-center">
                             <h4 className='text-center mb-5'>{newUser.signup ? 'Registration' : 'Login'}</h4>
-                            <form onSubmit={handleSubmit}>
+                            <form onSubmit={handleSubmit}
+                                data-aos="zoom-in"
+                                data-aos-easing="ease-in-out"
+                                data-aos-mirror="true"
+                                data-aos-duration="1000"
+                            >
                                 {
                                     newUser.signup && <input className='form-control mb-4 ' type="text" required name='name' onChange={handleChange} placeholder='Your Name' />
                                 }
@@ -241,15 +246,20 @@ const Login = () => {
                                 {/* <Link onClick={()=>handleSingup()}>{newUser.signup ? 'Login' : 'Create a Account'}</Link> */}
 
                                 {
-                                    !newUser.signup && <Link style={{color:'black'}} onClick={() => handleSingup()}>Create a Account</Link>
+                                    !newUser.signup && <Link style={{ color: 'black' }} onClick={() => handleSingup()}>Create a Account</Link>
                                 }
 
                                 {
-                                    !newUser.login && <Link style={{color:'black'}} onClick={() => handleregis()}>Login a Account</Link>
+                                    !newUser.login && <Link style={{ color: 'black' }} onClick={() => handleregis()}>Login a Account</Link>
                                 }
                             </form>
                         </div>
-                        <div className="col-md-7">
+                        <div className="col-md-7"
+                                data-aos="fade-left"
+                                data-aos-easing="ease-in-out"
+                                data-aos-mirror="true"
+                                data-aos-duration="1000"
+                        >
                             <img className='img-fluid' src={login} alt="" />
                         </div>
                     </div>
