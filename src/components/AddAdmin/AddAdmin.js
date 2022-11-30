@@ -14,7 +14,7 @@ const AddAdmin = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        fetch('http://localhost:4000/addAdmin', {
+        fetch('https://server-six-wine.vercel.app/addAdmin', {
             method: 'POST',
             headers: { 'content-type': 'application/json' },
             body: JSON.stringify(admin)
@@ -28,14 +28,14 @@ const AddAdmin = () => {
                     button: "OK",
                 })
 
-                fetch('http://localhost:4000/adminList')
+                fetch('https://server-six-wine.vercel.app/adminList')
                     .then(res => res.json())
                     .then(data => setListAdmin(data))
             })
     }
 
     useEffect(() => {
-        fetch('http://localhost:4000/adminList')
+        fetch('https://server-six-wine.vercel.app/adminList')
             .then(res => res.json())
             .then(data => setListAdmin(data))
     })

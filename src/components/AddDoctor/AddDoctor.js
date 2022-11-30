@@ -27,7 +27,7 @@ const AddDoctor = () => {
         formData.append('name', info.name)
         formData.append('email', info.email)
         formData.append('phone', info.phone)
-        fetch('http://localhost:4000/addDoctor', {
+        fetch('https://server-six-wine.vercel.app/addDoctor', {
             method: 'POST',
             body: formData
         })

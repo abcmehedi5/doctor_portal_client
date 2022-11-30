@@ -29,7 +29,7 @@ const AppointmentForm = ({ modalIsOpen, closeModal, appointmentOn, date }) => {
         appointment.email = loggedInUser.email
         appointment.date = date;
         appointment.create = new Date();
-        fetch('http://localhost:4000/addAppointments', {
+        fetch('https://server-six-wine.vercel.app/addAppointments', {
             method: 'POST',
             headers: { 'content-type': 'application/json' },
             body: JSON.stringify(appointment)

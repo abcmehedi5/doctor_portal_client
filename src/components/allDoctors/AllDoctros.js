@@ -8,7 +8,7 @@ const AllDoctros = () => {
     const [doctorOnChange, setDoctorOnChange] = useState({})
     console.log(doctorOnChange);
     useEffect(() => {
-        fetch('http://localhost:4000/doctors')
+        fetch('https://server-six-wine.vercel.app/doctors')
             .then(res => res.json())
             .then(data => {
                 setAllDoctors(data)
@@ -17,12 +17,12 @@ const AllDoctros = () => {
 
     const handleDelete = (id) => {
         // console.log(id);
-        fetch('http://localhost:4000/deleteDoctor/' + id, {
+        fetch('https://server-six-wine.vercel.app/deleteDoctor/' + id, {
             method: 'DELETE'
         })
             .then(res => res.json())
             .then(data => {
-                fetch('http://localhost:4000/doctors')
+                fetch('https://server-six-wine.vercel.app/doctors')
                     .then(res => res.json())
                     .then(data => setAllDoctors(data))
             })
@@ -32,7 +32,7 @@ const AllDoctros = () => {
     }
 
     const singleDoctorLoad = (id) => {
-        fetch('http://localhost:4000/singleDoctor/' + id)
+        fetch('https://server-six-wine.vercel.app/singleDoctor/' + id)
             .then(res => res.json())
             .then(data => setSingleDoctor(data))
     }
@@ -43,7 +43,7 @@ const AllDoctros = () => {
         const email = doctorOnChange.email;
         const phone = doctorOnChange.phone;
         const info = { id, name, email, phone }
-        fetch('http://localhost:4000/update/' + id, {
+        fetch('https://server-six-wine.vercel.app/update/' + id, {
             method: 'PATCH',
             // headers: { 'content-type': 'application/json' },
             headers: { 'Content-type': 'application/json; charset=UTF-8' },
@@ -57,7 +57,7 @@ const AllDoctros = () => {
                     icon: "success",
                     button: "OK",
                 });
-                fetch('http://localhost:4000/doctors')
+                fetch('https://server-six-wine.vercel.app/doctors')
                     .then(res => res.json())
                     .then(data => {
                         setAllDoctors(data)

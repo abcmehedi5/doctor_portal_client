@@ -9,7 +9,7 @@ const Sidebar = () => {
     const [isAdmin, setIsAdmin] = useState(false)
     // console.log('is admin ', isAdmin);
     useEffect(() => {
-        fetch('http://localhost:4000/isDoctor', {
+        fetch('https://server-six-wine.vercel.app/isDoctor', {
             method: 'POST',
             headers: { 'content-type': 'application/json' },
             body: JSON.stringify({ email: loggedInUser.email })
@@ -19,7 +19,7 @@ const Sidebar = () => {
     }, [])
 
     useEffect(() => {
-        fetch('http://localhost:4000/isAdmin', {
+        fetch('https://server-six-wine.vercel.app/isAdmin', {
             method: 'POST',
             headers: { 'content-type': 'application/json' },
             body: JSON.stringify({ email: loggedInUser.email })

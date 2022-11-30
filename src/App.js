@@ -26,7 +26,7 @@ function App() {
   const [loggedInUser, setLoggedInUser] = useState({})
   const [isDoctor, setIsDoctor] = useState(false)
   useEffect(() => {
-    fetch('http://localhost:4000/isDoctor', {
+    fetch('https://server-six-wine.vercel.app/isDoctor', {
       method: 'POST',
       headers: { 'content-type': 'application/json' },
       body: JSON.stringify({ email: loggedInUser.email })

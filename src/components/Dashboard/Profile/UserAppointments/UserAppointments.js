@@ -9,7 +9,7 @@ const UserAppointments = () => {
     const [userAppointments, setUserAppointments] = useState([])
     console.log(userAppointments);
     useEffect(() => {
-        fetch('http://localhost:4000/userAppointments?email=' + loggedInUser.email, {
+        fetch('https://server-six-wine.vercel.app/userAppointments?email=' + loggedInUser.email, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',

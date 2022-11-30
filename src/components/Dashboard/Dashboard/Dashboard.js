@@ -19,7 +19,7 @@ const Dashboard = () => {
     }
 
     useEffect(() => {
-        fetch('http://localhost:4000/appointmentsByDate', {
+        fetch('https://server-six-wine.vercel.app/appointmentsByDate', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

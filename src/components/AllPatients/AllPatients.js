@@ -6,14 +6,14 @@ const AllPatients = () => {
     const [appointments, setAppointments] = useState([]);
     const [search, setSearch] = useState('');
     useEffect(() => {
-        fetch('http://localhost:4000/appointments?search=' + search)
+        fetch('https://server-six-wine.vercel.app/appointments?search=' + search)
             .then(res => res.json())
             .then(data => setAppointments(data))
     }, [search])
 
     const handleDelete = (id) => {
         try {
-            fetch('http://localhost:4000/deleteAppointment/' + id, {
+            fetch('https://server-six-wine.vercel.app/deleteAppointment/' + id, {
                 method: 'DELETE'
             })
                 .then(res => res.json())
@@ -24,7 +24,7 @@ const AllPatients = () => {
                         icon: "success",
                         button: "OK",
                     });
-                    fetch('http://localhost:4000/appointments')
+                    fetch('https://server-six-wine.vercel.app/appointments')
                         .then(res => res.json())
                         .then(data => setAppointments(data))
                 })

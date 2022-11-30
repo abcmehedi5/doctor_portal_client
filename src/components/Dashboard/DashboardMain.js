@@ -6,7 +6,7 @@ const DashboardMain = () => {
     const [appointments, setAppointments] = useState([]);
     const [doctors, setDoctors] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:4000/appointmentsdash')
+        fetch('https://server-six-wine.vercel.app/appointmentsdash')
             .then(res => res.json())
             .then(data => {
                 setAppointments(data)
@@ -15,7 +15,7 @@ const DashboardMain = () => {
     })
 
     useEffect(() => {
-        fetch('http://localhost:4000/doctors')
+        fetch('https://server-six-wine.vercel.app/doctors')
             .then(res => res.json())
             .then(data => setDoctors(data))
     },[])

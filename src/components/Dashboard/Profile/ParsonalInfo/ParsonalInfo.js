@@ -19,7 +19,7 @@ const ParsonalInfo = () => {
         SetProfileInfo(newProfile);
     }
     useEffect(() => {
-        fetch('http://localhost:4000/profileInfo?email=' + loggedInUser.email, {
+        fetch('https://server-six-wine.vercel.app/profileInfo?email=' + loggedInUser.email, {
             method: 'GET',
             headers: { 'content-type': 'application/json' }
         })
@@ -42,7 +42,7 @@ const ParsonalInfo = () => {
         formData.append('blood', profileInfo.blood)
         formData.append('email', loggedInUser.email)
 
-        fetch('http://localhost:4000/profile', {
+        fetch('https://server-six-wine.vercel.app/profile', {
             method: 'POST',
             body: formData
         })
@@ -55,7 +55,7 @@ const ParsonalInfo = () => {
                     icon: "success",
                     button: "OK",
                 });
-                fetch('http://localhost:4000/profileInfo?email=' + loggedInUser.email, {
+                fetch('https://server-six-wine.vercel.app/profileInfo?email=' + loggedInUser.email, {
                     method: 'GET',
                     headers: { 'content-type': 'application/json' }
                 })
@@ -74,7 +74,7 @@ const ParsonalInfo = () => {
     }
     return (
         <div className='d-flex justify-content-center flex-column mb-5'>
-            <img className='profilePhoto mt-5' src={`http://localhost:4000/${profileLoad.img}`} alt="" />
+            <img className='profilePhoto mt-5' src={`https://server-six-wine.vercel.app/${profileLoad.img}`} alt="" />
             <div className='mt-5 d-flex justify-content-center'>
                 <form onSubmit={handleFile} className='w-75'>
                     <input className='form-control mb-4 ' type="text" onChange={handleChange} required name='name' defaultValue={profileLoad.name} placeholder='Full Name' />
